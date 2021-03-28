@@ -19,15 +19,16 @@ function Movie({id,year, title, summary, poster,genres}){
                 summary,
                 poster,
                 genres
-            }
-          }}
-         >   
-                    <img src = {poster} alt = {title} title = {title}/>
-                    <div className = "movie_data">
-                        <h3 className = "movie_title">{title}</h3>
-                        <h5 className = "movie_year">{year}</h5>
-                        <ul className="movie_genres">{genres.map((genre,index) => (<li key = {index} className ="genres_genre">{genre}</li> ))}</ul>
-                        <p className = "movie_summary">{summary.slice(0,140)}...</p> 
+            } // 이거지우면 state가 없다고 인식되어서 home으로 리다이렉션댐
+          }}// 여기까지 실제 이동하는 경로 이 이후로부터 하이퍼링크들
+         >    
+            <img src = {poster} alt = {title} title = {title}/>
+            <div className = "movie_data">
+            <h3 className = "movie_title">{title}</h3>
+            <h5 className = "movie_year">{year}</h5>
+            <ul className="movie_genres">{genres.map((genre,index) => (<li key = {index} className ="genres_genre">{genre}</li> ))}</ul>
+            <p className = "movie_summary">{summary.slice(0,140)}...</p> 
+            
          </div>
          </Link>
          </div>

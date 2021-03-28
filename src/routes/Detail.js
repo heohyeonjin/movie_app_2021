@@ -1,6 +1,7 @@
 import React from "react";
 
-class Detail extends React.Component{
+class Detail extends React.Component //render하면 무조건 React.Component상속 받아야함
+{
     componentDidMount(){
         const {location, history} = this.props; //location : 최근 경로 정보
         if(location.state === undefined){
@@ -17,8 +18,10 @@ class Detail extends React.Component{
         const {location} = this.props;
         if(location.state){
             return <li>
-            {location.state.title},
-            {location.state.year},
+            {location.state.title}/
+
+            {location.state.year}/
+
             {location.state.summary}
             </li>}
         else{

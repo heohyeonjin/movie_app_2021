@@ -20,7 +20,7 @@ getMovies = async () => {
 }
 //setState : state를 set할때 react에서 외부 상태에 의존하지 않는 좋은 방법
 //async : 이 함수는 비동기이다(기다려야 한다) await, axios가 끝날때 까지 기다렸다가 계속 함.
-/*render 하면 호출되는 life cycle method */ 
+//render 하면 호출되는 life cycle method 
   componentDidMount() //API로 부터 data fetching이 완료되면 movie render????
   {
     this.getMovies();
