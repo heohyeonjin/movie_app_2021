@@ -1,6 +1,5 @@
 
 /*라우터 생성 */
-
 import React from "react";
 import {HashRouter,Route} from "react-router-dom";
 import About from "./routes/About";

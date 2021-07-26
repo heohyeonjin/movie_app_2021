@@ -15,6 +15,7 @@ getMovies = async () => {
   // const movies.data.data.movies = await axios(“ “); movies.data.data.movies
   const{data:{data : {movies}}
   } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
+  console.log(movies);
   //this.setState({movies:movies}) 앞에 movies는 setState의 movies이고 뒤에는 axios에서 온 movies임 
   this.setState({movies, isLoading : false});  //단축해서 사용 가능
 }
@@ -33,9 +34,8 @@ getMovies = async () => {
     return (
           <section className = "container"> 
             {isLoading ? ( // class내에 있으므로 혼란스러울 수도있으므로 className이 적절
-            <div className = "loader">
-              <span className = "loader_test">Loading...</span> 
-            </div>
+            <span>Loading...</span> 
+    
             ):(
               <div className = "movies">{
               movies.map(mv =>(

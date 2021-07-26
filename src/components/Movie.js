@@ -33,6 +33,8 @@ function Movie({id,year, title, summary, poster,genres}){
          </Link>
          </div>
          );
+         /*(genre,index) --> 리액트는 element가 많은 경우 key를 주어야 한다. 
+         index는 movies를 map메소드를 이용해 돌면서 각각의 요소의 고유한 인덱스 번호로 key={index}를 주어 각 요소마다 고유한 key를 생성해 줌.*/
                 }
  
 // 내가 원하는 값이 맞는지 확인하는 용도
